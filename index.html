@@ -8,12 +8,18 @@
 		
 	</head>
 	<body  class="container jumbotron" ng-app="GameOfLifeApp" ng-controller="GameOfLifeController">
-		<h1>Conway's Game of Life</h1>
-		<p><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">The Game of Life</a>, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.</p>
-		<canvas ng-init="init()" ng-click="addNewLife($event)"id="GamePanel" width="500" height="500" style="border:1px solid #000000;">
-		</canvas>
-		<input type="button" class="btn primary" value="start" ng-click="start()">
-		<input type="button" class="btn alert" value="stop" ng-click="stop()">
-		<input type="button" class="btn" value="reset" ng-click="reset()">
+		<div class="row">
+			<h1>Conway's Game of Life</h1>
+			<p><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">The Game of Life</a>, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.</p>
+		</div>
+		<div class="container row">
+			<canvas ng-init="init()" ng-click="addNewLife($event)"id="GamePanel" width="500" height="500" style="border:1px solid #000000;">
+			</canvas>
+		</div>
+		<div class="container row">
+			<input type="button" class="btn btn-primary" value="start" ng-click="start()">
+			<input type="button" class="btn btn-danger" value="stop" ng-click="stop()">
+			<input type="button" class="btn" value="reset" ng-click="reset()">
+		</div>
 	</body>
 </html>
